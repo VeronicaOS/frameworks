@@ -6,9 +6,7 @@ import styles from "./header.module.css"; // Import the CSS module
 const Header = () => {
     return (
         <header className={styles.header}>
-            <div className={styles.logo}>
-                <img src="https://via.placeholder.com/100x40" alt="Logo" />
-            </div>
+            <div className={styles.logo}>SwiftBuy</div>
             <nav className={styles.nav}>
                 <a href="#home" className={styles.link}>
                     Home
