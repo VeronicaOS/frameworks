@@ -12,3 +12,10 @@
     display: flex;
     justify-content: center;
 }
+
+.searchbar {
+    background-color: #007bff;
+    padding: 1%;
+    display: flex;
+    justify-content: center;
+}

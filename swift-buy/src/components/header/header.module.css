@@ -6,7 +6,6 @@
     align-items: center;
     padding: 15px 20px;
     background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
@@ -25,7 +24,7 @@
 
 .link {
     text-decoration: none;
-    color: #007bff; /* A modern blue color for an e-commerce site */
+    color: #333; /* A modern blue color for an e-commerce site */
     font-size: 16px;
     font-weight: bold;
 }

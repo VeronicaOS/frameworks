@@ -1,0 +1,35 @@
+.searchBarContainer {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+}
+
+.searchInput {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.searchResults {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.searchResultItem {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.searchResultItem:hover {
+    background-color: #f0f0f0;
+}

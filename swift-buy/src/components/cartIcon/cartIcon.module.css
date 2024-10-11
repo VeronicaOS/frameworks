@@ -1,5 +1,6 @@
 .iconContainer {
     position: relative;
+    padding-right: 20px;
 }
 
 .cartIcon {
@@ -10,7 +11,7 @@
 .overlay {
     position: absolute;
     top: -15px;
-    right: -15px;
+    right: 5px;
     background-color: #007bff;
     color: white;
     border-radius: 50%;

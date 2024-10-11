@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { BASE_URL, API_KEY, load } from "../../api/constants";
 import styles from "./home.module.css";
+import SearchBar from "../../components/searchbar/searchbar";
 
 const HomePage = () => {
     const [products, setProducts] = useState([]);
@@ -45,13 +46,18 @@ const HomePage = () => {
 
     return (
         <Layout>
-            <div className={styles.homeFlex}>
-                <div className={styles.productList}>
-                    {products.map((product) => (
-                        <Product key={product.id} product={product} />
-                    ))}
+            <section>
+                <div className={styles.searchbar}>
+                    <SearchBar products={products} />
                 </div>
-            </div>
+                <div className={styles.homeFlex}>
+                    <div className={styles.productList}>
+                        {products.map((product) => (
+                            <Product key={product.id} product={product} />
+                        ))}
+                    </div>
+                </div>
+            </section>
         </Layout>
     );
 };
