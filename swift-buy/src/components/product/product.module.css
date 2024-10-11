@@ -1,26 +1,44 @@
-/* src/components/Product.module.css */
+/* Card layout */
 .productCard {
-    border: 1px solid #ddd;
-    padding: 1rem;
-    margin: 1rem;
+    background-color: #fff;
+    overflow: hidden;
     text-align: center;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 220px; /* Set max width for all product cards */
+    height: 350px; /* Fixed height for consistency */
+    padding-bottom: 10%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.productCard:hover .productImage {
+    transform: scale(1.4); /* Slightly scale the card on hover */
+}
+
+/* Image container with fixed dimensions */
+.productImageContainer {
+    height: 100%; /* Fixed height for all image containers */
+    width: 100%; /* Image container will take full width of the card */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensure that the image doesn't overflow */
 }
 
 .productImage {
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.viewButton {
-    background-color: #007bff;
-    color: white;
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    border-radius: 5px;
+/* Title and Price styling */
+.productTitle {
+    font-size: 1.1rem;
+    margin: 10px 0;
 }
 
-.viewButton:hover {
-    background-color: #0056b3;
+.productPrice {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
 }

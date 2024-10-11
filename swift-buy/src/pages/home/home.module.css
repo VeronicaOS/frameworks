@@ -1,0 +1,14 @@
+.productList {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Limit to a maximum of 5 columns */
+    grid-gap: 0px; /* Remove the gap between cards */
+    padding: 0; /* Remove padding if present */
+    width: 76%;
+    padding-top: 8%;
+    padding-bottom: 8%;
+}
+
+.homeFlex {
+    display: flex;
+    justify-content: center;
+}

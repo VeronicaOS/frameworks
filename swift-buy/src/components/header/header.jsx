@@ -1,5 +1,6 @@
 // src/components/Header.js
 import React from "react";
+import { Link } from "react-router-dom";
 import CartIcon from "../cartIcon/cartIcon";
 import styles from "./header.module.css"; // Import the CSS module
 
@@ -8,15 +9,14 @@ const Header = () => {
         <header className={styles.header}>
             <div className={styles.logo}>SwiftBuy</div>
             <nav className={styles.nav}>
-                <a href="#home" className={styles.link}>
+                <Link to="/" className={styles.link}>
                     Home
-                </a>
-                <a href="#shop" className={styles.link}>
-                    Shop
-                </a>
-                <a href="#contact" className={styles.link}>
+                </Link>
+                <Link className={styles.link}>Shop</Link>
+                <Link to="/contact" className={styles.link}>
+                    {" "}
                     Contact
-                </a>
+                </Link>
             </nav>
             <div className={styles.cartIcon}>
                 <CartIcon />
