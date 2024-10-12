@@ -1,15 +1,24 @@
 import React, { useContext } from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate from react-router-dom
 import { CartContext } from "../../context/cartContext";
 import styles from "./checkout.module.css"; // CSS module for styling
 
 const CheckoutPage = () => {
     const { cart } = useContext(CartContext);
+    const navigate = useNavigate(); // Use useNavigate to redirect to the success page
 
     // Calculate total price
     const totalPrice = cart.reduce(
         (total, item) => total + item.quantity * item.discountedPrice,
         0
     );
+
+    const handleCheckout = () => {
+        // Perform checkout actions (e.g., payment, confirmation) here
+
+        // Navigate to the CheckoutSuccessPage
+        navigate("/checkout-success");
+    };
 
     return (
         <div className={styles.checkoutContainer}>
@@ -45,7 +54,10 @@ const CheckoutPage = () => {
 
                     <div className={styles.cartSummary}>
                         <h2>Total: ${totalPrice.toFixed(2)}</h2>
-                        <button className={styles.checkoutButton}>
+                        <button
+                            onClick={handleCheckout}
+                            className={styles.checkoutButton}
+                        >
                             Checkout
                         </button>
                     </div>

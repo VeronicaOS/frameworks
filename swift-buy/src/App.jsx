@@ -50,6 +50,10 @@ const App = () => {
                             element={<ProductPage />}
                         />
                         <Route path="/checkout" element={<CheckoutPage />} />
+                        <Route
+                            path="/checkout-success"
+                            element={<checkoutSuccess />}
+                        />
                     </Routes>
                 </Layout>
             </Router>
