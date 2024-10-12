@@ -1,13 +1,24 @@
-// src/components/CartIcon.js
-import React from "react";
-import styles from "./cartIcon.module.css"; // Import the CSS module
+import React, { useContext } from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate from react-router-dom
+import { CartContext } from "../../context/cartContext";
+import styles from "./cartIcon.module.css";
 
 const CartIcon = () => {
-    // You can dynamically set this value based on your state or props
-    const cartItemCount = 5;
+    const { cart } = useContext(CartContext);
+    const navigate = useNavigate(); // Create the navigate function
+
+    const cartItemCount = cart.reduce(
+        (total, item) => total + item.quantity,
+        0
+    );
+
+    // Navigate to CheckoutPage on click
+    const handleIconClick = () => {
+        navigate("/checkout");
+    };
 
     return (
-        <div className={styles.iconContainer}>
+        <div className={styles.iconContainer} onClick={handleIconClick}>
             <i className="fas fa-shopping-cart fa-lg"></i>
 
             {cartItemCount > 0 && (

@@ -32,15 +32,28 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import HomePage from "./pages/home/home";
 import ProductPage from "./pages/product/productPage";
+import ContactPage from "./pages/contact/contact";
+import Layout from "./components/layout/layout";
+import { CartProvider } from "./context/cartContext";
+import CheckoutPage from "./pages/checkout/checkout";
 
 const App = () => {
     return (
-        <Router>
-            <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/product/:productId" element={<ProductPage />} />
-            </Routes>
-        </Router>
+        <CartProvider>
+            <Router>
+                <Layout>
+                    <Routes>
+                        <Route path="/" element={<HomePage />} />
+                        <Route path="/contact" element={<ContactPage />} />
+                        <Route
+                            path="/product/:productId"
+                            element={<ProductPage />}
+                        />
+                        <Route path="/checkout" element={<CheckoutPage />} />
+                    </Routes>
+                </Layout>
+            </Router>
+        </CartProvider>
     );
 };
 

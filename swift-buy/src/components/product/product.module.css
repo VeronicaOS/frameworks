@@ -31,13 +31,21 @@
 }
 
 .productTitle {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
+    font-weight: 600;
     margin: 10px 0;
     color: #333;
 }
 
 .productPrice {
-    font-size: 1.2rem;
-    font-weight: bold;
+    font-size: 1.1rem;
+    font-weight: 500;
     color: #333;
+    margin-bottom: 10px;
+}
+
+.originalPrice {
+    text-decoration: line-through;
+    color: #007bff;
+    margin-left: 10px;
 }

@@ -1,18 +1,24 @@
 .productPage {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start; /* Align items to the top */
+    gap: 20px; /* Add some space between the image and the details */
     padding: 20px;
-    max-width: 800px;
-    margin: 0 auto;
+}
+
+.productImage {
+    width: 50%; /* The image will take up 50% of the available width */
+    max-width: 400px; /* Ensure the image doesn't become too large */
+    object-fit: contain; /* Keep the aspect ratio intact */
+}
+
+.productDetails {
+    flex: 1; /* The product details will take up the remaining space */
 }
 
 .productTitle {
     font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.productImage {
-    width: 100%;
-    height: auto;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .productDescription {
@@ -23,8 +29,9 @@
 
 .productPrice {
     font-size: 1.5rem;
+    font-weight: bold;
     color: #333;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .originalPrice {
@@ -48,15 +55,15 @@
     font-size: 1rem;
     border-radius: 4px;
     transition: background-color 0.3s ease;
+    margin-bottom: 20px;
 }
 
 .addToCartButton:hover {
     background-color: #0056b3;
 }
 
-/* Fixed syntax here */
 .reviews {
-    margin-top: 30px; /* Corrected line */
+    margin-top: 20px;
 }
 
 .reviews h3 {
@@ -69,6 +76,6 @@
 }
 
 .reviews li {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     font-size: 1rem;
 }

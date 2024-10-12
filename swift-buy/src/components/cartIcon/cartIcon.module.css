@@ -1,6 +1,11 @@
 .iconContainer {
     position: relative;
     padding-right: 20px;
+    cursor: pointer;
+}
+
+.iconContainer:hover {
+    cursor: pointer;
 }
 
 .cartIcon {
