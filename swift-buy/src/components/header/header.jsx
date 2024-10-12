@@ -9,13 +9,13 @@ const Header = () => {
         <header className={styles.header}>
             <div className={styles.logo}>SwiftBuy</div>
             <nav className={styles.nav}>
+                <Link className={styles.link}>ABOUT</Link>
                 <Link to="/" className={styles.link}>
-                    Home
+                    SHOP
                 </Link>
-                <Link className={styles.link}>Shop</Link>
                 <Link to="/contact" className={styles.link}>
                     {" "}
-                    Contact
+                    CONTACT
                 </Link>
             </nav>
             <div className={styles.cartIcon}>

@@ -1,9 +1,9 @@
-import logo from "./logo.svg";
-import "./App.css";
-import Layout from "./components/layout/layout";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import HomePage from "./pages/home/home";
-import ContactPage from "./pages/contact/contact";
+// import logo from "./logo.svg";
+// import "./App.css";
+// import Layout from "./components/layout/layout";
+// import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+// import HomePage from "./pages/home/home";
+// import ContactPage from "./pages/contact/contact";
 
 // function App() {
 //     return (
@@ -28,18 +28,20 @@ import ContactPage from "./pages/contact/contact";
 //     );
 // }
 
-function App() {
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import HomePage from "./pages/home/home";
+import ProductPage from "./pages/product/productPage";
+
+const App = () => {
     return (
         <Router>
             <Routes>
-                {/* Home route */}
                 <Route path="/" element={<HomePage />} />
-
-                {/* Contact route */}
-                <Route path="/contact" element={<ContactPage />} />
+                <Route path="/product/:productId" element={<ProductPage />} />
             </Routes>
         </Router>
     );
-}
+};
 
 export default App;

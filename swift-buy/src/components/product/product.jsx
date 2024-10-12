@@ -1,22 +1,18 @@
-// src/components/Product.jsx
 import React from "react";
-import { Link } from "react-router-dom";
-import styles from "./product.module.css";
+import styles from "./product.module.css"; // Assuming you have a CSS module
 
 const Product = ({ product }) => {
     return (
         <div className={styles.productCard}>
-            {" "}
-            {/* Access class using the styles object */}
-            <div className={styles.productImageContainer}>
-                <img
-                    src={product.image.url}
-                    alt={product.image.alt || product.title}
-                    className={styles.productImage}
-                />
-            </div>
+            <img
+                src={product.image.url}
+                alt={product.title}
+                className={styles.productImage}
+            />
             <h2 className={styles.productTitle}>{product.title}</h2>
-            <p className={styles.productPrice}>£{product.price.toFixed(2)}</p>
+            <p className={styles.productPrice}>
+                ${product.discountedPrice.toFixed(2)}
+            </p>
         </div>
     );
 };

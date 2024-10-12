@@ -1,15 +1,14 @@
-/* Card layout */
 .productCard {
-    background-color: #fff;
-    overflow: hidden;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    max-width: 220px; /* Set max width for all product cards */
-    height: 350px; /* Fixed height for consistency */
-    padding-bottom: 10%;
-    transition: transform 0.3s ease-in-out;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer; /* Show pointer to indicate it's clickable */
+}
+
+.productCard:hover {
+    transform: translateY(-5px); /* Slight hover effect */
 }
 
 .productCard:hover .productImage {
@@ -28,17 +27,17 @@
 
 .productImage {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
 }
 
-/* Title and Price styling */
 .productTitle {
     font-size: 1.1rem;
     margin: 10px 0;
+    color: #333;
 }
 
 .productPrice {
-    font-size: 0.9rem;
-    margin-bottom: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
 }

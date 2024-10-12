@@ -7,7 +7,7 @@
 .searchInput {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 2px solid #007bff;
     border-radius: 4px;
     font-size: 16px;
 }
@@ -17,9 +17,9 @@
     margin: 0;
     padding: 0;
     position: absolute;
-    width: 100%;
+    width: 105%;
     background-color: #fff;
-    border: 1px solid #ddd;
+    border: 2px solid #007bff;
     border-radius: 4px;
     max-height: 200px;
     overflow-y: auto;
@@ -31,5 +31,5 @@
 }
 
 .searchResultItem:hover {
-    background-color: #f0f0f0;
+    background-color: #cce5ff;
 }

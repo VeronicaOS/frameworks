@@ -45,20 +45,25 @@ const HomePage = () => {
     }
 
     return (
-        <Layout>
-            <section>
-                <div className={styles.searchbar}>
-                    <SearchBar products={products} />
+        <section>
+            <div className={styles.searchbar}>
+                <SearchBar products={products} />
+            </div>
+            <h1 className={styles.h1}>Our Products</h1>
+            <div className={styles.homeFlex}>
+                <div className={styles.productList}>
+                    {products.map((product) => (
+                        <Link
+                            key={product.id}
+                            to={`/product/${product.id}`} // Navigate to product page with product ID
+                            className={styles.productLink} // Styling the clickable card
+                        >
+                            <Product product={product} />
+                        </Link>
+                    ))}
                 </div>
-                <div className={styles.homeFlex}>
-                    <div className={styles.productList}>
-                        {products.map((product) => (
-                            <Product key={product.id} product={product} />
-                        ))}
-                    </div>
-                </div>
-            </section>
-        </Layout>
+            </div>
+        </section>
     );
 };
 
