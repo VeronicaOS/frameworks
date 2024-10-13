@@ -11,3 +11,19 @@ h1 {
     font-weight: 500;
     color: #007bff;
 }
+
+/* MEDIA QUERIES MOBILE */
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+    body,
+    p {
+        max-width: 767px;
+        font-size: 90%;
+    }
+}
+
+/* MEDIA QUERIES IPAD */
+@media only screen and (min-width: 768px) and (max-width: 1180px) {
+    body {
+        max-width: 1180px;
+    }
+}

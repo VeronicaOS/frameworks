@@ -32,3 +32,89 @@
     display: flex;
     justify-content: flex-end;
 }
+
+/* HAMBURGER MENU STYLES */
+.hamburger {
+    display: none; /* Hide the hamburger on larger screens */
+    flex-direction: column;
+    justify-content: space-around;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 100%;
+    background-color: #333;
+    border-radius: 5px;
+}
+
+/* Hide Navigation by Default on Mobile */
+.nav {
+    display: flex;
+}
+
+.nav.active {
+    display: flex; /* Show nav when active */
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* MEDIA QUERIES MOBILE (0px - 767px) */
+@media only screen and (max-width: 767px) {
+    .nav {
+        display: none; /* Hide nav links initially */
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 60px; /* Position below the header */
+        left: 0;
+        right: 0;
+        background-color: white;
+        padding: 20px;
+        z-index: 100;
+        transition: all 0.3s ease;
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger menu on mobile */
+    }
+
+    .logo {
+        flex: none;
+        font-size: 1.5rem;
+    }
+
+    .cartIcon {
+        justify-content: flex-end;
+    }
+
+    /* Active state of nav */
+    .nav.active {
+        display: flex;
+    }
+}
+
+/* MEDIA QUERIES IPAD (768px - 1180px) */
+@media only screen and (min-width: 768px) and (max-width: 1180px) {
+    .header {
+        padding: 10px 20px; /* Adjust padding for iPad screens */
+    }
+
+    .logo {
+        font-size: 1.8rem; /* Slightly smaller logo for iPad */
+    }
+
+    .nav {
+        gap: 15px; /* Adjust gap for nav links */
+    }
+
+    .link {
+        font-size: 15px; /* Adjust font size for nav links */
+    }
+
+    .cartIcon {
+        justify-content: flex-end; /* Ensure cart icon is aligned to the right */
+    }
+}

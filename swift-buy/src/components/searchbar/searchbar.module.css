@@ -6,6 +6,7 @@
 
 .searchInput {
     width: 100%;
+    max-width: 500px;
     padding: 10px;
     border: 2px solid #007bff;
     border-radius: 4px;
@@ -32,4 +33,17 @@
 
 .searchResultItem:hover {
     background-color: #cce5ff;
+}
+
+/* MEDIA QUERIES MOBILE */
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+    .searchBarContainer {
+        display: flex;
+        justify-content: center;
+        width: 80%;
+    }
+}
+
+/* MEDIA QUERIES IPAD */
+@media only screen and (min-width: 768px) and (max-width: 1180px) {
 }

@@ -75,3 +75,14 @@
 .reviews li {
     margin-bottom: 10px;
 }
+
+/* MEDIA QUERIES MOBILE */
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+    .productPage {
+        flex-direction: column;
+    }
+}
+
+/* MEDIA QUERIES IPAD */
+@media only screen and (min-width: 768px) and (max-width: 1180px) {
+}
