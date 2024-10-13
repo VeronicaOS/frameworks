@@ -43,7 +43,6 @@ const ContactPage = () => {
             console.log("Form Data Submitted: ", formData);
             alert("Form submitted successfully!");
 
-            // Clear the form by resetting the state to initial values
             setFormData({
                 fullName: "",
                 subject: "",
@@ -51,7 +50,6 @@ const ContactPage = () => {
                 body: "",
             });
 
-            // Optionally clear errors as well
             setErrors({});
         } else {
             setErrors(formErrors);

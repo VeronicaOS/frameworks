@@ -1,13 +1,13 @@
-import React, { useState } from "react"; // Import useState to manage toggle state
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import CartIcon from "../cartIcon/cartIcon";
 import styles from "./header.module.css";
 
 const Header = () => {
-    const [isNavActive, setIsNavActive] = useState(false); // State to manage nav visibility
+    const [isNavActive, setIsNavActive] = useState(false);
 
     const toggleNav = () => {
-        setIsNavActive(!isNavActive); // Toggle the active state
+        setIsNavActive(!isNavActive);
     };
 
     return (

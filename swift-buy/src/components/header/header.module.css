@@ -33,9 +33,8 @@
     justify-content: flex-end;
 }
 
-/* HAMBURGER MENU STYLES */
 .hamburger {
-    display: none; /* Hide the hamburger on larger screens */
+    display: none;
     flex-direction: column;
     justify-content: space-around;
     width: 25px;
@@ -50,13 +49,12 @@
     border-radius: 5px;
 }
 
-/* Hide Navigation by Default on Mobile */
 .nav {
     display: flex;
 }
 
 .nav.active {
-    display: flex; /* Show nav when active */
+    display: flex;
     flex-direction: column;
     gap: 10px;
 }
@@ -64,11 +62,11 @@
 /* MEDIA QUERIES MOBILE (0px - 767px) */
 @media only screen and (max-width: 767px) {
     .nav {
-        display: none; /* Hide nav links initially */
+        display: none;
         flex-direction: column;
         align-items: center;
         position: absolute;
-        top: 50px; /* Position below the header */
+        top: 50px;
         left: 0;
         right: 0;
         background-color: white;
@@ -78,7 +76,7 @@
     }
 
     .hamburger {
-        display: flex; /* Show hamburger menu on mobile */
+        display: flex;
     }
 
     .logo {
@@ -90,7 +88,6 @@
         justify-content: flex-end;
     }
 
-    /* Active state of nav */
     .nav.active {
         display: flex;
     }
@@ -99,22 +96,22 @@
 /* MEDIA QUERIES IPAD (768px - 1180px) */
 @media only screen and (min-width: 768px) and (max-width: 1180px) {
     .header {
-        padding: 10px 20px; /* Adjust padding for iPad screens */
+        padding: 10px 20px;
     }
 
     .logo {
-        font-size: 1.8rem; /* Slightly smaller logo for iPad */
+        font-size: 1.8rem;
     }
 
     .nav {
-        gap: 15px; /* Adjust gap for nav links */
+        gap: 15px;
     }
 
     .link {
-        font-size: 15px; /* Adjust font size for nav links */
+        font-size: 15px;
     }
 
     .cartIcon {
-        justify-content: flex-end; /* Ensure cart icon is aligned to the right */
+        justify-content: flex-end;
     }
 }
