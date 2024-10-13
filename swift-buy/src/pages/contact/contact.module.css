@@ -50,3 +50,15 @@ textarea {
     font-size: 0.9em;
     margin-top: 5px;
 }
+
+/* MEDIA QUERIES MOBILE */
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+    input,
+    textarea {
+        width: 90%;
+    }
+}
+
+/* MEDIA QUERIES IPAD */
+@media only screen and (min-width: 768px) and (max-width: 1180px) {
+}

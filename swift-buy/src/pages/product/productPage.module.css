@@ -14,6 +14,7 @@
     height: auto;
     margin-bottom: 20px;
     object-fit: contain;
+    align-self: center;
 }
 
 .productDescription {
@@ -74,4 +75,36 @@
 
 .reviews li {
     margin-bottom: 10px;
+}
+
+/* Simple loader styling */
+.loader {
+    border: 5px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 5px solid #007bff;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* MEDIA QUERIES MOBILE */
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+    .productPage {
+        flex-direction: column;
+    }
+
+    .productImage {
+        max-width: 100%;
+        margin: 0;
+    }
 }

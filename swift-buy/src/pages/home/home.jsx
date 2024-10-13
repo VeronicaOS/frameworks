@@ -8,7 +8,7 @@ import SearchBar from "../../components/searchbar/searchbar";
 const HomePage = () => {
     const [products, setProducts] = useState([]);
     const [error, setError] = useState(null);
-
+    const [loading, setLoading] = useState(true);
     useEffect(() => {
         const apiKey = load("API_KEY") || API_KEY;
 
@@ -28,19 +28,25 @@ const HomePage = () => {
             .then((data) => {
                 console.log("Fetched data:", data);
                 setProducts(data.data);
+                setLoading(false);
             })
             .catch((error) => {
                 setError(`Error fetching products: ${error.message}`);
                 console.error("Error fetching products:", error);
+                setLoading(false);
             });
     }, []);
+
+    if (loading) {
+        return <div className={styles.loader}></div>;
+    }
 
     if (error) {
         return <p>{error}</p>;
     }
 
     if (products.length === 0) {
-        return <p>Loading products...</p>;
+        return <p>No products available.</p>;
     }
 
     return (
@@ -49,7 +55,7 @@ const HomePage = () => {
                 <SearchBar products={products} />
             </div>
             <h1 className={styles.h1}>Our Products</h1>
-            <div className={styles.homeFlex}>
+            <div className={styles.homeGrid}>
                 <div className={styles.productList}>
                     {products.map((product) => (
                         <Link

@@ -42,6 +42,15 @@ const ContactPage = () => {
         if (Object.keys(formErrors).length === 0) {
             console.log("Form Data Submitted: ", formData);
             alert("Form submitted successfully!");
+
+            setFormData({
+                fullName: "",
+                subject: "",
+                email: "",
+                body: "",
+            });
+
+            setErrors({});
         } else {
             setErrors(formErrors);
         }
