@@ -36,6 +36,7 @@ import ContactPage from "./pages/contact/contact";
 import Layout from "./components/layout/layout";
 import { CartProvider } from "./context/cartContext";
 import CheckoutPage from "./pages/checkout/checkout";
+import CheckoutSuccessPage from "./pages/checkout/checkoutSuccess";
 
 const App = () => {
     return (
@@ -52,7 +53,7 @@ const App = () => {
                         <Route path="/checkout" element={<CheckoutPage />} />
                         <Route
                             path="/checkout-success"
-                            element={<checkoutSuccess />}
+                            element={<CheckoutSuccessPage />}
                         />
                     </Routes>
                 </Layout>

@@ -9,7 +9,7 @@ const CheckoutSuccessPage = () => {
     useEffect(() => {
         // Clear the cart when this page is loaded
         setCart([]);
-    }, [setCart]);
+    });
 
     return (
         <div className={styles.successContainer}>
