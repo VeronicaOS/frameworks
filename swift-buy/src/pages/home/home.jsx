@@ -51,7 +51,7 @@ const HomePage = () => {
             <h1 className={styles.h1}>Our Products</h1>
             <div className={styles.homeFlex}>
                 <div className={styles.productList}>
-                    {products.map((product) => (
+                    {products.map((product, index) => (
                         <Link
                             key={product.id}
                             to={`/product/${product.id}`}

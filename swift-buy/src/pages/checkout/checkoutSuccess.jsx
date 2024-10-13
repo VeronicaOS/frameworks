@@ -8,7 +8,7 @@ const CheckoutSuccessPage = () => {
 
     useEffect(() => {
         setCart([]);
-    });
+    }, [setCart]);
 
     return (
         <div className={styles.successContainer}>
