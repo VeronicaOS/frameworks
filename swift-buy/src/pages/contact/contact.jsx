@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styles from "./contact.module.css";
-import Layout from "../../components/layout/layout";
 
 const ContactPage = () => {
     const [formData, setFormData] = useState({
@@ -12,7 +11,6 @@ const ContactPage = () => {
 
     const [errors, setErrors] = useState({});
 
-    // Form validation function
     const validateForm = () => {
         const newErrors = {};
 
@@ -37,13 +35,11 @@ const ContactPage = () => {
         return newErrors;
     };
 
-    // Handle form submission
     const handleSubmit = (e) => {
         e.preventDefault();
         const formErrors = validateForm();
 
         if (Object.keys(formErrors).length === 0) {
-            // Log the form data to the console
             console.log("Form Data Submitted: ", formData);
             alert("Form submitted successfully!");
         } else {
@@ -51,7 +47,6 @@ const ContactPage = () => {
         }
     };
 
-    // Handle input changes
     const handleChange = (e) => {
         setFormData({
             ...formData,

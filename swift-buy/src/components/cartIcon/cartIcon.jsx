@@ -1,18 +1,17 @@
 import React, { useContext } from "react";
-import { useNavigate } from "react-router-dom"; // Import useNavigate from react-router-dom
+import { useNavigate } from "react-router-dom";
 import { CartContext } from "../../context/cartContext";
 import styles from "./cartIcon.module.css";
 
 const CartIcon = () => {
     const { cart } = useContext(CartContext);
-    const navigate = useNavigate(); // Create the navigate function
+    const navigate = useNavigate();
 
     const cartItemCount = cart.reduce(
         (total, item) => total + item.quantity,
         0
     );
 
-    // Navigate to CheckoutPage on click
     const handleIconClick = () => {
         navigate("/checkout");
     };

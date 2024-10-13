@@ -1,22 +1,18 @@
 import React, { useContext } from "react";
-import { useNavigate } from "react-router-dom"; // Import useNavigate from react-router-dom
+import { useNavigate } from "react-router-dom";
 import { CartContext } from "../../context/cartContext";
-import styles from "./checkout.module.css"; // CSS module for styling
+import styles from "./checkout.module.css";
 
 const CheckoutPage = () => {
     const { cart } = useContext(CartContext);
-    const navigate = useNavigate(); // Use useNavigate to redirect to the success page
+    const navigate = useNavigate();
 
-    // Calculate total price
     const totalPrice = cart.reduce(
         (total, item) => total + item.quantity * item.discountedPrice,
         0
     );
 
     const handleCheckout = () => {
-        // Perform checkout actions (e.g., payment, confirmation) here
-
-        // Navigate to the CheckoutSuccessPage
         navigate("/checkout-success");
     };
 

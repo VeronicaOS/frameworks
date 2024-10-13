@@ -1,13 +1,12 @@
 import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { CartContext } from "../../context/cartContext"; // Import CartContext
-import styles from "./checkoutSuccess.module.css"; // Import the CSS module
+import { CartContext } from "../../context/cartContext";
+import styles from "./checkoutSuccess.module.css";
 
 const CheckoutSuccessPage = () => {
-    const { setCart } = useContext(CartContext); // Get the setCart function to clear the cart
+    const { setCart } = useContext(CartContext);
 
     useEffect(() => {
-        // Clear the cart when this page is loaded
         setCart([]);
     });
 

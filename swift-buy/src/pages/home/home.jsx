@@ -1,4 +1,3 @@
-import Layout from "../../components/layout/layout";
 import Product from "../../components/product/product";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
@@ -11,7 +10,7 @@ const HomePage = () => {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        const apiKey = load("API_KEY") || API_KEY; // Load the API key or use the default
+        const apiKey = load("API_KEY") || API_KEY;
 
         fetch(`${BASE_URL}/online-shop`, {
             headers: {
@@ -27,8 +26,8 @@ const HomePage = () => {
                 return response.json();
             })
             .then((data) => {
-                console.log("Fetched data:", data); // Inspect the fetched data
-                setProducts(data.data); // Access the 'data' property
+                console.log("Fetched data:", data);
+                setProducts(data.data);
             })
             .catch((error) => {
                 setError(`Error fetching products: ${error.message}`);
@@ -37,11 +36,11 @@ const HomePage = () => {
     }, []);
 
     if (error) {
-        return <p>{error}</p>; // Display error messages
+        return <p>{error}</p>;
     }
 
     if (products.length === 0) {
-        return <p>Loading products...</p>; // Display loading or empty state
+        return <p>Loading products...</p>;
     }
 
     return (
@@ -55,8 +54,8 @@ const HomePage = () => {
                     {products.map((product) => (
                         <Link
                             key={product.id}
-                            to={`/product/${product.id}`} // Navigate to product page with product ID
-                            className={styles.productLink} // Styling the clickable card
+                            to={`/product/${product.id}`}
+                            className={styles.productLink}
                         >
                             <Product product={product} />
                         </Link>

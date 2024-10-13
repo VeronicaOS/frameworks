@@ -1,14 +1,14 @@
 import React, { useEffect, useState, useContext } from "react";
 import { useParams } from "react-router-dom";
 import { BASE_URL, API_KEY, load } from "../../api/constants";
-import { CartContext } from "../../context/cartContext"; // Import the CartContext
-import styles from "./productPage.module.css"; // CSS module for styling
+import { CartContext } from "../../context/cartContext";
+import styles from "./productPage.module.css";
 
 const ProductPage = () => {
-    const { productId } = useParams(); // Get product ID from URL
+    const { productId } = useParams();
     const [product, setProduct] = useState(null);
     const [error, setError] = useState(null);
-    const { addToCart } = useContext(CartContext); // Get addToCart function from CartContext
+    const { addToCart } = useContext(CartContext);
 
     useEffect(() => {
         const apiKey = load("API_KEY") || API_KEY;
@@ -26,7 +26,7 @@ const ProductPage = () => {
                 return response.json();
             })
             .then((data) => {
-                setProduct(data.data); // Set the fetched product data
+                setProduct(data.data);
             })
             .catch((error) =>
                 setError(`Error fetching product: ${error.message}`)
@@ -41,7 +41,6 @@ const ProductPage = () => {
         return <p>Loading product details...</p>;
     }
 
-    // Safe checks for price and discountedPrice
     const price = product.price !== undefined ? product.price : null;
     const discountedPrice =
         product.discountedPrice !== undefined ? product.discountedPrice : null;
@@ -86,7 +85,7 @@ const ProductPage = () => {
                 </p>
 
                 <button
-                    onClick={() => addToCart(product)} // Add product to the cart
+                    onClick={() => addToCart(product)}
                     className={styles.addToCartButton}
                 >
                     Add to Cart

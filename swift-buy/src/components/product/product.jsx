@@ -1,6 +1,5 @@
 import React from "react";
-import styles from "./product.module.css"; // Assuming you have a CSS module
-
+import styles from "./product.module.css";
 const Product = ({ product }) => {
     const price = product.price !== undefined ? product.price : null;
     const discountedPrice =

@@ -2,7 +2,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import CartIcon from "../cartIcon/cartIcon";
-import styles from "./header.module.css"; // Import the CSS module
+import styles from "./header.module.css";
 
 const Header = () => {
     return (

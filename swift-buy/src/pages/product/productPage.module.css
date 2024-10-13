@@ -1,23 +1,23 @@
 .productPage {
-    display: flex; /* Set the container to use Flexbox */
-    flex-direction: row; /* Ensure that items are placed in a row (side by side) */
-    align-items: flex-start; /* Align items at the top */
-    justify-content: space-between; /* Add space between items if needed */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
     padding: 20px;
     max-width: 800px;
-    margin: 10% auto; /* Center the product page on the screen */
+    margin: 10% auto;
     gap: 3%;
 }
 
 .productImage {
-    max-width: 50%; /* Take up 50% of the container width */
+    max-width: 50%;
     height: auto;
     margin-bottom: 20px;
-    object-fit: contain; /* Make sure the image doesn't get distorted */
+    object-fit: contain;
 }
 
 .productDescription {
-    flex: 1; /* Take up the remaining space */
+    flex: 1;
     font-size: 1.2rem;
     margin-bottom: 20px;
 }
