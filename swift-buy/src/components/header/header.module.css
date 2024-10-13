@@ -68,7 +68,7 @@
         flex-direction: column;
         align-items: center;
         position: absolute;
-        top: 60px; /* Position below the header */
+        top: 50px; /* Position below the header */
         left: 0;
         right: 0;
         background-color: white;
@@ -83,7 +83,7 @@
 
     .logo {
         flex: none;
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
     .cartIcon {

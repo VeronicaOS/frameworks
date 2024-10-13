@@ -6,10 +6,8 @@ import styles from "./layout.module.css";
 const Layout = ({ children }) => {
     return (
         <div className={styles.layout}>
-            {/* <div> */}
             <Header />
             <main>{children}</main>
-            {/* </div> */}
             <Footer />
         </div>
     );

@@ -8,10 +8,12 @@ const ProductPage = () => {
     const { productId } = useParams();
     const [product, setProduct] = useState(null);
     const [error, setError] = useState(null);
+    const [loading, setLoading] = useState(true); // Add loading state
     const { addToCart } = useContext(CartContext);
 
     useEffect(() => {
         const apiKey = load("API_KEY") || API_KEY;
+
         fetch(`${BASE_URL}/online-shop/${productId}`, {
             headers: {
                 Authorization: `Bearer ${apiKey}`,
@@ -27,18 +29,20 @@ const ProductPage = () => {
             })
             .then((data) => {
                 setProduct(data.data);
+                setLoading(false); // Set loading to false when data is fetched
             })
-            .catch((error) =>
-                setError(`Error fetching product: ${error.message}`)
-            );
+            .catch((error) => {
+                setError(`Error fetching product: ${error.message}`);
+                setLoading(false); // Set loading to false in case of error
+            });
     }, [productId]);
+
+    if (loading) {
+        return <div className={styles.loader}></div>; // Display loader while fetching data
+    }
 
     if (error) {
         return <p>{error}</p>;
-    }
-
-    if (!product) {
-        return <p>Loading product details...</p>;
     }
 
     const price = product.price !== undefined ? product.price : null;

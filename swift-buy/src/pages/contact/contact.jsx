@@ -42,6 +42,17 @@ const ContactPage = () => {
         if (Object.keys(formErrors).length === 0) {
             console.log("Form Data Submitted: ", formData);
             alert("Form submitted successfully!");
+
+            // Clear the form by resetting the state to initial values
+            setFormData({
+                fullName: "",
+                subject: "",
+                email: "",
+                body: "",
+            });
+
+            // Optionally clear errors as well
+            setErrors({});
         } else {
             setErrors(formErrors);
         }

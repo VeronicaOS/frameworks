@@ -59,7 +59,7 @@ const CheckoutPage = () => {
                     </div>
                 </>
             ) : (
-                <p>Your cart is empty.</p>
+                <p className={styles.emptyCart}>Your cart is empty.</p>
             )}
         </div>
     );
