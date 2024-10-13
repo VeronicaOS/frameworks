@@ -1,0 +1,28 @@
+// src/components/Header.js
+import React from "react";
+import { Link } from "react-router-dom";
+import CartIcon from "../cartIcon/cartIcon";
+import styles from "./header.module.css";
+
+const Header = () => {
+    return (
+        <header className={styles.header}>
+            <div className={styles.logo}>SwiftBuy</div>
+            <nav className={styles.nav}>
+                <Link className={styles.link}>ABOUT</Link>
+                <Link to="/" className={styles.link}>
+                    SHOP
+                </Link>
+                <Link to="/contact" className={styles.link}>
+                    {" "}
+                    CONTACT
+                </Link>
+            </nav>
+            <div className={styles.cartIcon}>
+                <CartIcon />
+            </div>
+        </header>
+    );
+};
+
+export default Header;

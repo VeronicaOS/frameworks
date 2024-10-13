@@ -1,0 +1,25 @@
+.iconContainer {
+    position: relative;
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+.iconContainer:hover {
+    cursor: pointer;
+}
+
+.cartIcon {
+    width: 30px;
+    height: 30px;
+}
+
+.overlay {
+    position: absolute;
+    top: -15px;
+    right: 5px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 50%;
+    padding: 4px 8px;
+    font-size: 12px;
+}
